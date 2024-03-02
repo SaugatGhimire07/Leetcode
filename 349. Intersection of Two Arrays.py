@@ -1,6 +1,4 @@
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        for i in range(len(nums1)):
-            for j in range(len(nums2)):
-                if nums1[i] == nums2[j]:
-                    return nums1[i]
+        intersect = set(nums1).intersection(set(nums2))
+        return list(intersect)
